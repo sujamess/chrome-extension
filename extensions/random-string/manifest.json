@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Random String",
+  "version": "0.1.0",
+  "description": "Generate random strings from a context menu or the toolbar popup.",
+  "minimum_chrome_version": "116",
+  "action": {
+    "default_popup": "ui/popup.html",
+    "default_title": "Random String",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "offscreen",
+    "scripting",
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
