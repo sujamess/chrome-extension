@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Random String</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Random string</h1>
+      <div id="chips" class="chips" role="group" aria-label="Preset"></div>
+      <div class="row">
+        <label for="length">Length</label>
+        <output id="length-value" for="length">18</output>
+      </div>
+      <input id="length" type="range" min="4" max="64" step="1" />
+      <div id="symbol-row" class="row symbols">
+        <label for="symbol">Symbols</label>
+        <input id="symbol" type="text" spellcheck="false" autocomplete="off" />
+      </div>
+      <textarea id="output" readonly rows="3" aria-label="Generated string"></textarea>
+      <p id="entropy" class="entropy"></p>
+      <div class="actions">
+        <button id="copy" type="button" class="primary">Copy</button>
+        <button id="regenerate" type="button">Regenerate</button>
+      </div>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
